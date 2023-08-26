@@ -1,7 +1,7 @@
-import '../globals.css';
+import './globals.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
-import { languages } from '../i18n/settings';
+import { languages } from './i18n/settings';
 
 export async function generateStaticParams() {
   return languages.map((lng) => ({ lng }));
@@ -21,6 +21,7 @@ export default function RootLayout({
   children: React.ReactNode;
   params: { lng: string };
 }) {
+  if (!lng) lng = 'kr';
   return (
     <html lang={lng}>
       <head />
