@@ -1,5 +1,5 @@
 // import Image from 'next/image';
-import SelectLanguage from '../selectLanguage';
+import SelectLanguage from './selectLanguage';
 import { useTranslation } from '../i18n';
 
 export default async function Home({
