@@ -1,7 +1,14 @@
 // import Image from 'next/image';
-import SelectLanguage from './selectLanguage';
+import SelectLanguage from '../selectLanguage';
+import { useTranslation } from '../i18n';
 
-export default function Home() {
+export default async function Home({
+  params: { lng },
+}: {
+  params: { lng: string };
+}) {
+  const { t } = await useTranslation(lng);
+
   return (
     <>
       <header className="bg-white">
@@ -51,19 +58,17 @@ export default function Home() {
             /> */}
         <div className="z-10 max-w-5xl w-full flex-col items-center justify-between text-sm lg:flex">
           <div className="flex flex-row gap-10 pt-20 pb-36">
-            <SelectLanguage />
+            <SelectLanguage lng={lng} />
             <div className="w-72 h-28 text-gray-700 sm:text-8xl self-end">
               plz 🙏
             </div>
           </div>
           <span className="text-3xl py-8 italic">
-            &quot;존버해도 한국어 정발은 나오지 않습니다&quot;
+            &quot;{t('Description/NoLocalization')}&quot;
           </span>
 
-          <span className="text-xl py-2">MAC용 이미지 스트리밍 번역 툴</span>
-          <span className="text-xl py-2">
-            게임의 외국어를 실시간으로 편하게 번역해 플레이하세요
-          </span>
+          <p className="text-xl py-2">{t('Description/1')}</p>
+          <p className="text-xl py-2">{t('Description/2')}</p>
         </div>
         <div></div>
       </main>
