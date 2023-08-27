@@ -13,12 +13,12 @@ export default async function Home({
   return (
     <>
       <div className="flex flex-col align-center justify-center md:flex-row pt-20 pb-20 md:pb-36 ">
-        <div className="w-72 self-center">
+        <div className="w-56 self-center">
           <SelectLanguage lng={lng} />
         </div>
-
-        <div className="w-72 h-28 text-gray-700 text-8xl self-center md:self-end">
-          plz 🙏
+        <div className="relative w-56 h-40 md:h-36 text-gray-700 text-9xl font-light self-center md:self-end">
+          plz
+          <span className="absolute bottom-0 left-32">🙏</span>
         </div>
       </div>
       <div className="flex flex-col align-center justify-center text-center">

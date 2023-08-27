@@ -2,6 +2,9 @@ import '../globals.css';
 import { Inter } from 'next/font/google';
 import { languages } from '../i18n/settings';
 import Nav from './nav';
+// import imgSrc from './KRplz_img_1.png';
+// import Image from 'next/image';
+// import imgSrc from '@assets/KRplz_img_1.png';
 
 export async function generateStaticParams() {
   return languages.map((lng) => ({ lng }));
@@ -36,8 +39,9 @@ export default function RootLayout({
             </div>
           </div>
         </header>
-        <main className="flex min-h-screen flex-col items-center justify-left p-10">
-          {/* <Image
+        <main>
+          <div className="bg-gradient-to-b from-indigo-100 via-purple-300 to-pink-400 to-90% flex flex-col items-center justify-left p-10 h-2/3">
+            {/* <Image
               src="/woman-shrugging.svg"
               alt="Logo"
               // className="dark:invert"
@@ -45,10 +49,13 @@ export default function RootLayout({
               height={1}
               priority
             /> */}
-          <div className="z-10 max-w-5xl w-full flex-col items-center justify-between text-sm lg:flex">
-            {children}
+            <div className="z-10 max-w-5xl w-full flex-col items-center justify-between text-sm lg:flex">
+              {children}
+            </div>
           </div>
-          <div></div>
+          <div className="bg-gradient-to-b from-pink-400 absolute w-screen h-1/3">
+            {/* <Image src={imgSrc} /> */}
+          </div>
         </main>
         <footer></footer>
       </body>
