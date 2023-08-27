@@ -11,7 +11,7 @@ const SelectLanguage = ({ lng }: { lng: string }) => {
         htmlFor="Language"
         className="block text-xs font-medium text-gray-500"
       >
-        Select the Language you want to localize
+        Please select a language for you
       </label>
 
       <select
