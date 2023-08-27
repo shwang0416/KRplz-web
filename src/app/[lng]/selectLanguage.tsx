@@ -18,7 +18,7 @@ const SelectLanguage = ({ lng }: { lng: string }) => {
         name="Language"
         id="Language"
         value={lng}
-        className="mt-1.5 w-60 h-28 rounded-lg border-gray-300 text-gray-700 sm:text-8xl"
+        className="mt-1.5 w-60 h-28 rounded-lg border-gray-300 text-gray-700 text-8xl"
         onChange={(e) => router.push(`/${e.target.value}`)}
       >
         <option value="kr">KR</option>
